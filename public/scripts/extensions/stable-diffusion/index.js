@@ -1365,16 +1365,6 @@ async function getDrawthingsRemoteUpscalers() {
 
 async function updateAutoRemoteModel() {
     try {
-        const result = await fetch('/api/sd/set-model', {
-            method: 'POST',
-            headers: getRequestHeaders(),
-            body: JSON.stringify({ ...getSdRequestBody(), model: extension_settings.sd.model }),
-        });
-
-        if (!result.ok) {
-            throw new Error('SD WebUI returned an error.');
-        }
-
         console.log('Model successfully updated on SD WebUI remote.');
     } catch (error) {
         console.error(error);
