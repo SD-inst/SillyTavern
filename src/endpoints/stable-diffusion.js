@@ -318,7 +318,7 @@ router.post('/set-model', jsonParser, async (request, response) => {
 
 router.post('/generate', jsonParser, async (request, response) => {
     try {
-        console.log('SD WebUI request:', request.body);
+        // console.log('SD WebUI request:', request.body);
 
         const url = new URL(request.body.url);
         url.pathname = '/sdapi/v1/txt2img';

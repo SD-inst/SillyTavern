@@ -227,7 +227,7 @@ router.post('/generate', jsonParser, async function (request, response) {
 
         const apiType = request.body.api_type;
         const baseUrl = request.body.api_server;
-        console.log(request.body);
+        // console.log(request.body);
 
         const controller = new AbortController();
         request.socket.removeAllListeners('close');
@@ -348,7 +348,7 @@ router.post('/generate', jsonParser, async function (request, response) {
 
             if (completionsReply.ok) {
                 const data = await completionsReply.json();
-                console.log('Endpoint response:', data);
+                // console.log('Endpoint response:', data);
 
                 // Wrap legacy response to OAI completions format
                 if (request.body.legacy_api) {
